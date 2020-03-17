@@ -1,0 +1,48 @@
+#logo{
+    height:3.5em;
+    padding: none;
+    position: relative;
+}
+#custom{
+    background-color: #bf3a30;
+background-image: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
+    
+
+}
+body{
+    width: 100%;
+}
+.h{
+    height:50em;
+    overflow: hidden;
+}
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+.text{
+    text-align: justify;
+    margin-right: auto;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+    padding: 1.3em;
+    font-weight: 400;
+
+    /* -webkit-transition: background-image 2s ease-out;
+    -moz-transition: background-image 2s ease-out;
+    -o-transition: background-image 2s ease-out;
+    transition: background-image 2s ease-out; */
+}
+.text:hover{
+    background-color: #bf3a30;
+    background-image: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
+  cursor: pointer;
+  color:wheat;
+  border-radius: 5px;
+}
+#pic{
+    padding:1.2em;
+    height:30em;
+    width:40em;
+}

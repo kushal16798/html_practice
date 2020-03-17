@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    enter first value:<input type="text" name="first" id="first" value="">
+    enter second value:<input type="text" name="second" id="second" value=""><br>
+    <input type="radio" id="sum" name="func" value="+">add <br>
+    <input type="radio" id="subtract" name="func" value="-">subtract <br>
+    <input type="radio" id="division" name="func" value="/">divide <br>
+    <input type="radio" id="multiplication" name="func" value="*">multiply<br>
+    <input type="button" onclick="solve()" value="solve">
+    <h3 id="result"></h3>
+</body>
+
+<script>
+    function solve() {
+        let a=document.getElementsByName("func").value
+        if(a='+'){
+            let res= parseInt(document.getElementById("first").value) + parseInt(document.getElementById("second").value)
+            document.getElementById("result").innerHTML=res;
+        }
+        if(a='-'){
+            let res= parseInt(document.getElementById("first").value) - parseInt(document.getElementById("second").value)
+            document.getElementById("result").innerHTML=res;
+        }
+        if(a='*'){
+            let res= parseInt(document.getElementById("first").value) * parseInt(document.getElementById("second").value)
+            document.getElementById("result").innerHTML=res;
+        }
+        if(a='/'){
+            let res= parseInt(document.getElementById("first").value) / parseInt(document.getElementById("second").value)
+            document.getElementById("result").innerHTML=res;
+        }
+    }
+</script>
+
+</html>

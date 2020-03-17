@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name:</label>
+            <input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                onfocusout="validateName()" required>
+            <small id="nameHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for="dob">DOB:</label>
+            <input type="date" class="form-control" id="exampleInputDOB">
+        </div>
+        <!-- <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="button" class="btn btn-primary" onclick="find()">Submit</button>
+
+    </form>
+    <h3 class="display-3" id="text"></h3>
+    <script>
+        function validateName() {
+            var Regex = /^[A-Za-z]+[\ ]+[A-Za-z]+$/;
+            let name = document.getElementById("exampleInputName").value
+            if (name.match(Regex)) {
+                document.getElementById("nameHelp").innerHTML = ""
+                return true
+            }
+            else {
+                // alert("put the name in correct format..")
+                document.getElementById("nameHelp").innerHTML = "put the name in correct format"
+                document.getElementById("exampleInputName").focus()
+                return false
+            }
+        }
+        function find() {
+            // var dateString = document.getElementById("exampleInputDOB").value
+            // var today = new Date();
+            // var birthDate = new Date(dateString);
+            // var age = today.getFullYear() - birthDate.getFullYear();
+            // var m = today.getMonth() - birthDate.getMonth();
+            // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            //     age--;
+            // }
+            // document.getElementById("text").innerHTML = age
+            var birthDate = document.getElementById('exampleInputDOB').value;
+
+            
+            var d = new Date(birthDate);
+
+
+
+            var mdate = birthDate.toString();
+            var yearThen = parseInt(mdate.substring(0, 4), 10);
+            var monthThen = parseInt(mdate.substring(5, 7), 10);
+            var dayThen = parseInt(mdate.substring(8, 10), 10);
+
+            var today = new Date();
+            var birthday = new Date(yearThen, monthThen - 1, dayThen);
+            //   alert(today.valueOf() + " " + birthday.valueOf());
+            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
+            //  alert(differenceInMilisecond);
+
+            var year_age = Math.floor(differenceInMilisecond / 31536000000);
+            var day_age = Math.floor((differenceInMilisecond % 31536000000) / 86400000);
+
+            if ((today.getMonth() == birthday.getMonth()) && (today.getDate() == birthday.getDate())) {
+                alert("Happy B'day!!!");
+            }
+
+            var month_age = Math.floor(day_age / 30);
+
+            day_age = day_age % 30;
+
+            var tMnt = (month_age + (year_age * 12));
+            var tDays = (tMnt * 30) + day_age;
+
+            if (isNaN(year_age) || isNaN(month_age) || isNaN(day_age)) {
+                document.getElementById("text").innerHTML = ("Invalid birthday - Please try again!");
+            }
+            else {
+                document.getElementById("text").innerHTML = year_age + " years " + month_age + " months " + day_age + " days"
+                    + "<br/> or <br/> "
+                    + tMnt + " months " + day_age + " days"
+                    + "<br/> or <br/>"
+                    + tDays + " days"
+                    + "<br/> or <br/>"
+                    + tDays * 24 + " hours"
+                    + "<br/> or <br/>"
+                    + tDays * 24 * 3600 + " seconds"
+                    + "<br/> or <br/>"
+                    + tDays * 24 * 3600 * 1000 + " miliseconds";
+            }
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

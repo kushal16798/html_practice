@@ -1,0 +1,35 @@
+#logo{
+    height:3em;
+    width:7em;
+}
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+#icon{
+   font-size: 2em;  
+}
+.h:hover{
+    background-color: #292b2c	;
+    color: white;
+}
+m-5{
+    margin-top: 10px;
+   
+}
+.p-relative{
+    position: relative;
+}
+.p-abs{
+    position: absolute;
+    height: 28em;
+    width:20em;  
+    color: antiquewhite;
+    margin-left: 44em;
+    margin-top: 10em;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    text-align: justify;
+    padding: 1em;
+}
+body{
+
+}
