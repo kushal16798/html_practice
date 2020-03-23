@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">enter</button>
+
+<p id="demo"></p>
+RANDOM GENERATED INTEGER:<h2 id="random"></h2>
+<h3 id="result"></h3>
+<script>
+function myFunction() {
+  var number = prompt("Please enter the number:");
+  document.getElementById("random").innerHTML=Math.floor(Math.random() * 10) + 1;
+  if(number==document.getElementById("random").value){
+                document.getElementById("result").innerHTML="Good WOrk";
+            }
+            else{
+                document.getElementById("result").innerHTML="not matched";   
+            }
+}
+</script>
+
+</body>
+</html>

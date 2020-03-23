@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ENTER THE VALUE:<input type="text" name="int" id="int"><br>
+    RANDOM GENERATED INTEGER:<h2 id="random"></h2>
+    <input type="button" value="enter" onclick="myFunc()">
+    <h3 id="result"></h3>
+
+    <script>
+        function myFunc(){
+            document.getElementById("random").innerHTML=Math.floor(Math.random() * 10) + 1; 
+            var a=document.getElementById("random").value;
+            if(a==document.getElementById("int").value){
+                document.getElementById("result").innerHTML="Good WOrk";
+            }
+            else{
+                document.getElementById("result").innerHTML="not matched";   
+            }
+        }
+    </script>
+</body>
+</html>

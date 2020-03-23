@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+            ENTER THE LENGTH OF THREE SIDES:
+        <input type="text" name="first" id="first">
+        <input type="text" name="second" id="second">
+        <input type="text" name="third" id="third">
+        <input type="button" value="find" onclick="findArea()">
+    </form>
+    <h2 id="area"></h2>
+    <script>    
+        function findArea(){
+            var a=parseInt(document.getElementById("first").value);
+            var b=parseInt(document.getElementById("second").value);
+            var c=parseInt(document.getElementById("third").value);
+            var s=(a+b+c)/2;
+            var area= Math.sqrt(s*((s-a)*(s-b)*(s-c)))
+            document.getElementById("area").innerHTML="area of the triangle is "+area+" sq. unit";
+        }
+    </script>
+</body>
+
+</html>
