@@ -1,0 +1,94 @@
+/* @media only screen and (max-width: 600px) {
+    .bg-curve{
+        content:url("./images/bg-curve-mobile.svg");
+    }
+} */
+.mt-7{
+    margin-top: 7rem!important;
+}
+
+.sec-1{
+    background-size: contain;
+}
+
+.display-5{
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.9rem;
+    font-weight: 700;
+}
+@media(max-width: 768px) {
+    button.full-width {
+        width: 100%;  
+    }
+}
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.display-6{
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#bg-color{
+    background-color:#fcfcfc;
+}@media only screen and (max-width: 769px) {
+
+    .display-5{
+        font-size:2rem;
+    }
+    
+    .display-6{
+        font-size:2rem;
+    }
+ 
+ }
+ .card{
+    width: 30em;
+    -moz-box-shadow:    3px 3px 5px 1px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+    box-shadow:         3px 3px 5px 1px #ccc;
+    padding: 20px;
+  }
+  .profile{
+    border-radius: 100%;
+    height: 3.125em;
+    width: 3.125em;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .testimonial{
+    font-size: 16px;
+  }
+  
+  .image-middle{
+    height: 65%;
+    width: 35%;
+    position: absolute;
+    right: 6.25em;
+    top: 65.625em;
+  }
+  @media only screen and (max-width: 769px) {
+    .card{
+        width: 20em;
+        -moz-box-shadow:    3px 3px 5px 1px #ccc;
+        -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+        box-shadow:         3px 3px 5px 1px #ccc;
+        padding: 20px;
+      }
+  }
+
+.bg-violet{
+    background-color: hsl(238, 22%, 44%);
+}
+
+ul{
+    list-style-type: none;
+}
+
+  
